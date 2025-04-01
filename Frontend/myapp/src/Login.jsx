@@ -1,43 +1,69 @@
-import React, { useState } from "react";
-import axios from 'axios';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [msg, setMsg] = useState(null); // use 'msg' consistently
-    
-    const handleSubmit = async (e) => {
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate(); // Initialize navigation
+
+    const handleLogin = async (e) => {
         e.preventDefault();
+        setError('');
+        setLoading(true);
+
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
-            setMsg(response.data.message); // Set success message
-            localStorage.setItem('token', response.data.token); // Store token
+            const response = await fetch('http://localhost:5000/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            
+            if (response.status === 200) {
+                navigate('/home'); // Redirect to Home page
+            } else {
+                setError(data.message);
+            }
         } catch (error) {
-            setMsg(error.response?.data?.message || 'An error occurred'); // Set error message
+            setError('Something went wrong. Please try again later.');
         }
+
+        setLoading(false);
     };
 
     return (
-        <div>
+        <div className="login-container">
             <h2>Login</h2>
-            {msg && <p>{msg}</p>} {/* Display message */}
-            <form onSubmit={handleSubmit}>
-                <label>Email:</label>
-                <input 
-                    type='email'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <label>Password:</label>
-                <input
-                    type='password'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type='submit'>Login</button>
+            <form onSubmit={handleLogin}>
+                <div className="form-group">
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Password:</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Logging in...' : 'Login'}
+                </button>
             </form>
+            {error && <p className="error-message">{error}</p>}
         </div>
     );
 };
