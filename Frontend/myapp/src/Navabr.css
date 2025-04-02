@@ -1,0 +1,46 @@
+.navbar {
+    height: 70px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.navdiv {
+    margin: 0 10px;
+}
+
+.navtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 130px;
+    color: bisque;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.navtext:hover {
+    color: black;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}

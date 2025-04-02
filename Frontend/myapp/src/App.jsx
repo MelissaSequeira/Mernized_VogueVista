@@ -1,13 +1,23 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './Navbar';
 import Login from './Login';
-import Home from './Home'; // Create Home.js later
+import Home from './Home';
+import Discover from './discover';
 
 const App = () => {
+  const location = useLocation(); // Get the current route
+
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/home" element={<Home />} />
-    </Routes>
+    <>
+      {/* Show Navbar on all pages except Login */}
+      {location.pathname !== '/' && <Navbar />} 
+
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/discover" element={<Discover />} />
+      </Routes>
+    </>
   );
 };
 
