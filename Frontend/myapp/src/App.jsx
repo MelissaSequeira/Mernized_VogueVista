@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Login from './Login';
 import Home from './Home';
 import Discover from './discover';
+import Register from './Register';
 
 const App = () => {
   const location = useLocation(); // Get the current route
@@ -10,9 +11,10 @@ const App = () => {
   return (
     <>
       {/* Show Navbar on all pages except Login */}
-      {location.pathname !== '/' && <Navbar />} 
+      {location.pathname !== '/' && location.pathname !== '/register' && <Navbar />} 
 
       <Routes>
+        <Route path="/register" element={<Register/>} />
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/discover" element={<Discover />} />
