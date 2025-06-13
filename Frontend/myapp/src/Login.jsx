@@ -62,6 +62,7 @@ const Login = () => {
                 <button type="submit" disabled={loading}>
                     {loading ? 'Logging in...' : 'Login'}
                 </button>
+                <a href="/register" className="register-link">New to our service? Register</a>
             </form>
             {error && <p className="error-message">{error}</p>}
         </div>

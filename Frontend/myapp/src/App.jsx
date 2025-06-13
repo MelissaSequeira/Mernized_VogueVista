@@ -14,8 +14,8 @@ const App = () => {
       {location.pathname !== '/' && location.pathname !== '/register' && <Navbar />} 
 
       <Routes>
-        <Route path="/register" element={<Register/>} />
         <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register/>} />
         <Route path="/home" element={<Home />} />
         <Route path="/discover" element={<Discover />} />
       </Routes>
