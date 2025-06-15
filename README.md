@@ -25,11 +25,11 @@ Mernized VogueVista is a full-stack fashion e-commerce platform designed to prov
 ---
 
 ## 🛠 Tech Stack
-- **Frontend:** React.js, Redux, Bootstrap 🎨
+- **Frontend:** React.js, 🎨
 - **Backend:** Node.js, Express.js ⚙️
 - **Database:** MongoDB 🛢️
 - **Authentication:** JWT (JSON Web Token) 🔑
-- **Deployment:** Docker, Vercel/Heroku 🚀
+- **Deployment:** Render(Backend), Netlify(Frontend)  🚀
 
 ---
 
