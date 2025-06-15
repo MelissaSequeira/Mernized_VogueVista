@@ -9,7 +9,7 @@ router.post('/login', authUser);
 
 // Protected user profile route
 router.get('/profile', protect, async (req, res) => {
-    const user = await User.findById(req.usaer.id).select('-password'); // Exclude the password
+    const user = await User.findById(req.user.id).select('-password'); // Exclude the password
     if (user) {
         res.status(200).json(user);
     } else {
