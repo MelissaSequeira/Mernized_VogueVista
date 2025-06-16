@@ -12,7 +12,7 @@ const handleSubmit = async (e) => {
   setLoading(true);
 
   try {
-    const response = await fetch('http://localhost:5000/api/feed/feedpost', {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/feed/feedpost`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // Corrected content-type
