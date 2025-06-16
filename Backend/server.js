@@ -24,7 +24,7 @@ app.use('/api/cart', cartRoutes);
 
 
 // Start the server and connect to MongoDB
-mongoose.connect(process.env.URI, {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
