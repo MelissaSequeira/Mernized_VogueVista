@@ -9,7 +9,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment variables
-.env
+
 
 # Package lock files (optional, if you want to ignore them)
 package-lock.json
