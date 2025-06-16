@@ -1,110 +1,58 @@
-#discover {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    flex-flow: wrap;
-    padding-top: 80px;
-    align-content: center;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+#discover {height: 600px;
+    margin-top:250px;
+  display:flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* spacing between all cards */
+  padding: 20px; /* outer spacing */
+  background-color: #fef2e4;
+  justify-content: center; /* center the last item if odd */
 }
-.divdresses{
-    background:linear-gradient(to right,rgba(30, 28, 23, 0.6),rgba(0, 0, 0, 0.6)),url('./assets/as-dress.jpeg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    display: flex;
-    color: beige;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 380px;
-    margin: 20px; 
+
+/* Common box styles */
+#discover > div {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: beige;
+  font-size: 48px;
 }
-.divaccess{
-    background:linear-gradient(to right,rgba(30, 28, 23, 0.6),rgba(0, 0, 0, 0.6)),url('./assets/as-acc.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    display: flex;
-    color: beige;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 380px;
-    margin: 20px; 
+
+/* Individual category backgrounds */
+.divdresses {
+  background: linear-gradient(to right, rgba(30,28,23,0.6), rgba(0,0,0,0.6)), url('./assets/as-dress.jpeg');
 }
-.divcosmt{
-    background:linear-gradient(to right,rgba(30, 28, 23, 0.6),rgba(0, 0, 0, 0.6)),url('./assets/as-cos.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    display: flex;
-    color: beige;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 380px;
-    margin: 20px; 
+.divaccess {
+  background: linear-gradient(to right, rgba(30,28,23,0.6), rgba(0,0,0,0.6)), url('./assets/as-acc.jpg');
 }
-.divjewels{
-    background:linear-gradient(to right,rgba(30, 28, 23, 0.6),rgba(0, 0, 0, 0.6)),url('./assets/as-jew.jpeg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    display: flex;
-    color: beige;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 380px;
-    margin: 20px; 
+.divcosmt {
+  background: linear-gradient(to right, rgba(30,28,23,0.6), rgba(0,0,0,0.6)), url('./assets/as-cos.jpg');
 }
-.divfoots{
-    background:linear-gradient(to right,rgba(30, 28, 23, 0.6),rgba(0, 0, 0, 0.6)),url('./assets/as-foot.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    display: flex;
-    color: beige;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 380px;
-    margin: 20px; 
+.divjewels {
+  background: linear-gradient(to right, rgba(30,28,23,0.6), rgba(0,0,0,0.6)), url('./assets/as-jew.jpeg');
 }
-.divjacks{
-    background:linear-gradient(to right,rgba(30, 28, 23, 0.6),rgba(0, 0, 0, 0.6)),url('./assets/as-jack.avif');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    display: flex;
-    color: beige;
-    font-size: 50px;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 380px;
-    margin: 20px; 
+.divfoots {
+  background: linear-gradient(to right, rgba(30,28,23,0.6), rgba(0,0,0,0.6)), url('./assets/as-foot.jpg');
 }
-.discover-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: bisque;
-    text-decoration: none;
-    letter-spacing: 4px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+
+/* Link styles */
+.discover-text {
+  color: bisque;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: font-size 0.5s ease;
 }
-.discover-text:hover{
-    color: bisque;
-    font-size: 60px;
-    transition-duration: 1s;
+
+.discover-text:hover {
+  font-size: 44px;
 }

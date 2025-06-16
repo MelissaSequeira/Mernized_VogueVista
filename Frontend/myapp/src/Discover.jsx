@@ -1,19 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './discover.css';
+
 const Discover = () => {
   return (
+    <>
     <div id="discover">
-        <div className="divdresses"><a className="discover-text" href="#categary-dress">Dresses</a></div>
-<div className="divaccess"><a className="discover-text" href="#categary-access">Accessories</a></div>
-<div className="divcosmt"><a className="discover-text" href="#categary-cosmet">Cosmetics</a></div>
-<div className="divjewels"><a className="discover-text" href="#categary-jewel">Jewelry</a></div>
-<div className="divfoots"><a className="discover-text" href="#categary-foot">Footwears</a></div>
-<div className="divjacks"><a className="discover-text" href="#categary-jack">Jackets & Scarfs</a></div>
-
-    </div>
+      <div className="divdresses"><Link className="discover-text" to="/dresses">Dresses</Link></div>
+      <div className="divaccess"><Link className="discover-text" to="/accessories">Accessories</Link></div>
+      <div className="divcosmt"><Link className="discover-text" to="/cosmetics">Cosmetics</Link></div>
+      <div className="divjewels"><Link className="discover-text" to="/jewelry">Jewelry</Link></div>
+      <div className="divfoots"><Link className="discover-text" to="/footwears">Footwears</Link></div>
+    </div></>
+    
   );
 };
 
 export default Discover;
-
-

@@ -18,14 +18,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 750px;
     width: 100%;
 }
 
 .title {
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 70px;
+    font-size: 100px;
     font-weight: 400;
     text-align: center;
     letter-spacing: 2px;

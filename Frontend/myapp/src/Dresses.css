@@ -1,0 +1,68 @@
+.dresses-container {
+  padding: 30px;
+  text-align: center;
+  min-height: 100vh;
+  background-color: #fef2e4;
+  margin-top: 50px;
+}
+
+.dresses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dress-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  width: 100%;
+  max-width: 250px;
+}
+
+.dress-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.dress-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.dress-card h4 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.dress-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #7b4b2a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #5e371f;
+}

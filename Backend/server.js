@@ -13,10 +13,12 @@ app.use(express.json());
 // Import user routes
 const userRoutes = require('./routes/userRoute');
 const feedRoutes = require('./routes/feedRoute');
+const cartRoutes= require('./routes/cartRoute')
 
 // Use routes (prefix with /api/auth)
 app.use('/api/auth', userRoutes);
 app.use('/api/feed', feedRoutes);
+app.use('/api/cart', cartRoutes);
 
 // Root route to test the server
 
