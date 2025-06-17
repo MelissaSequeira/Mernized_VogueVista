@@ -1,5 +1,7 @@
 import React ,{useState}from 'react'; 
 import { useNavigate } from 'react-router-dom';
+import.meta.env.VITE_REACT_APP_API_URL
+
 import './Login.css';
 const Register=()=>{
     const [name, setName]=useState('');
@@ -14,7 +16,7 @@ const Register=()=>{
         setError('');
         setLoading(true);
         try {
-            const response= await fetch(`${process.env.REACT_APP_API_URL}/api/auth/register`,{
+            const response= await fetch(`${meta.env.REACT_APP_API_URL}/api/auth/register`,{
                 method:'POST',
             headers:{
                 'Content-Type':'application/json',
