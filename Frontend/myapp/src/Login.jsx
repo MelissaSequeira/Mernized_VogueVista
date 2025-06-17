@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Login.css';
-import.meta.env.VITE_REACT_APP_API_URL
 
 
 const Login = () => {

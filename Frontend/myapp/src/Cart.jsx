@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import.meta.env.VITE_REACT_APP_API_URL
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
 
   const fetchCart = () => {
-    fetch(`${meta.env.VITE_REACT_APP_API_URL}/api/cart/cartinfo`)
+    fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/api/cart/cartinfo`)
       .then(res => res.json())
       .then(data => setCartItems(data));
   };
@@ -15,7 +14,7 @@ const Cart = () => {
   }, []);
 
   const removeItem = (id) => {
-    fetch(`${meta.env.VITE_REACT_APP_API_URL}/api/cart/cartdelete/${id}`, {
+    fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/api/cart/cartdelete/${id}`, {
       method: 'DELETE',
     })
       .then(() => fetchCart())
@@ -25,7 +24,7 @@ const Cart = () => {
 
 
   const clearCart = () => {
-    fetch(`${meta.env.VITE_REACT_APP_API_URL}/cart/cartdeleteall`, {
+    fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/cart/cartdeleteall`, {
       method: 'DELETE',
     })
       .then(() => fetchCart())
