@@ -16,7 +16,7 @@ const Register=()=>{
         setError('');
         setLoading(true);
         try {
-            const response= await fetch(`${meta.env.REACT_APP_API_URL}/api/auth/register`,{
+            const response= await fetch(`${meta.env.VITE_REACT_APP_API_URL}/api/auth/register`,{
                 method:'POST',
             headers:{
                 'Content-Type':'application/json',

@@ -15,7 +15,7 @@ const handleSubmit = async (e) => {
   setLoading(true);
 
   try {
-    const response = await fetch(`${meta.env.REACT_APP_API_URL}/api/feed/feedpost`, {
+    const response = await fetch(`${meta.env.VITE_REACT_APP_API_URL}/api/feed/feedpost`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', // Corrected content-type
