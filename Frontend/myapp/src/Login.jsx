@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
-
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate(); // Initialize navigation
+    const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -25,11 +24,11 @@ const Login = () => {
             });
 
             const data = await response.json();
-            
-            if (response.status === 200) {
-                navigate('/home'); // Redirect to Home page
+
+            if (!response.ok) {
+                setError(data.message || 'Login failed');
             } else {
-                setError(data.message);
+                navigate('/home');
             }
         } catch (error) {
             setError('Something went wrong. Please try again later.');
@@ -44,21 +43,11 @@ const Login = () => {
             <form onSubmit={handleLogin}>
                 <div className="form-group">
                     <label>Email:</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 </div>
                 <div className="form-group">
                     <label>Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 </div>
                 <button type="submit" disabled={loading}>
                     {loading ? 'Logging in...' : 'Login'}
