@@ -10,8 +10,7 @@ Mernized VogueVista is a full-stack fashion e-commerce platform designed to prov
 - [🚀 Installation](#-installation)
 - [📖 Usage](#-usage)
 - [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [📬 Contact](#-contact)
+- [📜 Deployment](#-deploy)
 
 ---
 
@@ -80,8 +79,9 @@ Contributions are welcome! 🚀 To contribute:
 
 ---
 
-## 📜 License
-This project is not licensed and is **Open Source** 📄
+## Deployment:
+1)Frontend: (https://mernivoguevista.netlify.app/)
+2)Backend : (https://mernized-voguevista.onrender.com/)
 
 ---
 
